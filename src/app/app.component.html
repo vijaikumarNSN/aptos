@@ -1,0 +1,48 @@
+<div class="container">
+  <form [formGroup]="dropDownForm">
+    <br/>
+    <br/>
+    <div class="flex-box flex-half">
+      <div>
+        <app-aptos-dropdowm
+          labelKey="Normal Dropdown"
+          placeHolderText="Select an option"
+          [control]="dropDownForm.get('dropDown1')"
+          [values]="dropDown1"
+          valueLabelProperty="text"
+          valueIdProperty="key"
+        >
+
+        </app-aptos-dropdowm>
+      </div>
+      <div>
+        <app-aptos-dropdowm
+          labelKey="Dropdown with prefiled value with disabled option"
+          placeHolderText="Select an option"
+          [control]="dropDownForm.get('dropDown2')"
+          [values]="dropDown2"
+          valueLabelProperty="text"
+          valueIdProperty="value"
+        >
+
+        </app-aptos-dropdowm>
+      </div>
+    </div>
+    <br/>
+    <br/>
+    <div class="flex-box flex-full">
+      <div>
+        <app-aptos-dropdowm
+          labelKey="DropDown with scrollBar"
+          placeHolderText="Select an option"
+          [control]="dropDownForm.get('dropDown3')"
+          [values]="dropDown3"
+          valueLabelProperty="text"
+          valueIdProperty="value"
+        >
+
+        </app-aptos-dropdowm>
+      </div>
+    </div>
+  </form>
+</div>

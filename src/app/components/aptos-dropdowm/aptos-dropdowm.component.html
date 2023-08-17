@@ -1,0 +1,14 @@
+<div class="aptos-dropdown">
+    <label class="label-key" *ngIf="labelKey" [for]="controlName">{{labelKey}}</label>
+    <button [disabled]="control.disabled" (click)="toggleDropDowm()" class="aptos-dropdown-selector">
+        <div class="place-holder" *ngIf="placeHolderText && !selectedValue">{{placeHolderText}}</div>
+        <div *ngIf="selectedValue" class="dropdown-value">{{selectedValue[valueLabelProperty]}}</div>
+        <i *ngIf="!showDropDown" class="arrow down"></i>
+        <i *ngIf="showDropDown" class="arrow up"></i>
+    </button>
+    <div [ngClass]="{showdropdown:showDropDown}" class="aptos-dropdown-options">
+        <ul class="aptos-dropdown-scroll">
+            <li [ngClass]="{active:selectedValue ? option[valueIdProperty] === selectedValue[valueIdProperty] : ''}" (click)="onDropdownChange(option)" *ngFor="let option of values">{{option[valueLabelProperty]}}</li>
+        </ul>
+    </div>
+</div>

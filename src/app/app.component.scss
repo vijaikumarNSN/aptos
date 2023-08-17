@@ -1,0 +1,17 @@
+.container{
+    max-width: 960px;
+    margin: 0 auto;
+}
+.flex-box{
+    display: flex;
+}
+.flex-half{
+    column-gap: 10px;
+}
+.flex-half > div{
+    flex-grow: 1;
+    flex-basis: 0;
+}
+.flex-full > div{
+    flex-grow: 1;
+}

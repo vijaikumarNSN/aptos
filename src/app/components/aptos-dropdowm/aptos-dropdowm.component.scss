@@ -1,0 +1,82 @@
+.aptos-dropdown{
+    position: relative;
+    .label-key{       
+        font-weight: 700;
+    }
+    .aptos-dropdown-selector{
+        display: flex;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        margin-top: 5px;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        width: 100%;
+    }
+    
+    button.aptos-dropdown-selector:disabled{
+        background: #ccc;
+        opacity: 0.8;
+        cursor: not-allowed;
+        color: #000;
+    }
+    .place-holder{
+        color: #ccc;
+    }
+}
+.aptos-dropdown-options{
+    position: absolute;
+    left: 0;
+    right: 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: #fff;
+    padding: 5px 5px 5px 0;
+    margin-top: 3px;
+    z-index: 1;
+    display: none;
+    &.showdropdown{
+        display: block;
+    }
+    .aptos-dropdown-scroll{       
+        max-height: 250px;
+        overflow: auto;
+    }
+    li{
+        display: block;
+        padding: 10px;
+        cursor: pointer;
+        &:hover , &.active{
+            background-color: lightblue;
+        }
+    }
+}
+.arrow {
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 2px;
+}
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
